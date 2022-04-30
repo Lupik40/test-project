@@ -3,17 +3,15 @@ import { IPokemonItem } from "../../types/IPokemonItem";
 import PokeItem from "../PokeItem/index";
 import "./styles.scss";
 
-interface IMoviesListParams {
+interface IPokemonItemParams {
   list: IPokemonItem[];
 }
 
-const PokeList: React.FC<IMoviesListParams> = ({ list }) => (
+const PokeList: React.FC<IPokemonItemParams> = ({ list }) => (
   <ul className="pokemons">
-    {list.length > 0 ? (
-      list.map((item: any) => <PokeItem item={item} key={item.id} />)
-    ) : (
-      <p>No pokemons!</p>
-    )}
+    {list.map((item: IPokemonItem) => (
+      <PokeItem item={item} key={item.id} />
+    ))}
   </ul>
 );
 

@@ -28,7 +28,9 @@ const PokeDetailPage: React.FC = () => {
           <h2 className="pokemon-detail__name">{pokemon.name}</h2>
           <ul className="pokemon-detail__types">
             {pokemon.types.map((i) => (
-              <li className={i.type.name}>{i.type.name}</li>
+              <li className={i.type.name} key={i.type.name}>
+                {i.type.name}
+              </li>
             ))}
           </ul>
           <p className="pokemon-detail__info">

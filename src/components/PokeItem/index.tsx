@@ -19,7 +19,9 @@ const PokeItem: React.FC<IPokemontemParams> = ({ item }) => (
       <h2 className="pokemon__name">{item.name}</h2>
       <ul className="pokemon__types">
         {item.types.map((i) => (
-          <li className={i.type.name}>{i.type.name}</li>
+          <li className={i.type.name} key={i.type.name}>
+            {i.type.name}
+          </li>
         ))}
       </ul>
     </NavLink>

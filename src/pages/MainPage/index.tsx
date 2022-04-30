@@ -10,7 +10,7 @@ import IPokemonResponse from "../../types/IPokemonResponse";
 
 const MainPage: React.FC = () => {
   const [pokemons, setPokemons] = useState<IPokemonItem[]>([]);
-  const [countPokemons, setCountPokemons] = useState<string>("10");
+  const [countPokemons, setCountPokemons] = useState("10");
   const [inputValue, setInputValue] = useState<string>("");
   const [typesPokemons, setTypesPokemons] = useState<string[]>([]);
   const [activeTypesPokemons, setActiveTypesPokemons] = useState<string[]>([]);
@@ -31,7 +31,7 @@ const MainPage: React.FC = () => {
                 ? item.types.find((item) =>
                     activeTypesPokemons.includes(item.type.name)
                   )
-                : true
+                : item
             )
         );
 
@@ -45,8 +45,7 @@ const MainPage: React.FC = () => {
       ? activeTypesPokemons.join(", ")
       : "not selected";
 
-  const getPokemonName = () =>
-    inputValue.length > 0 ? inputValue : "not selected";
+  const getPokemonName = () => (inputValue ? inputValue : "not selected");
 
   return (
     <PokemonContext.Provider
