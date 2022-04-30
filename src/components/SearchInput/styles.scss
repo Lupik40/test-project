@@ -1,0 +1,21 @@
+$small-mobile: 400px;
+
+.name {
+  &__input {
+    display: block;
+    width: 300px;
+    height: 40px;
+    padding: 5px 10px;
+    font-size: 20px;
+    border: none;
+    background: #fff;
+    border: 2px solid rgb(255, 162, 0);
+    outline: none;
+  }
+}
+
+@media screen and (max-width: $small-mobile) {
+  .name__input {
+    width: 95%;
+  }
+}

@@ -1,0 +1,18 @@
+.footer {
+  padding: 50px 0 20px;
+  background: rgba(223, 223, 223, 0.713);
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__text {
+    font-size: 20px;
+    font-weight: 700;
+
+    span {
+      color: rgb(255, 162, 0);
+    }
+  }
+}

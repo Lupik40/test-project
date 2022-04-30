@@ -1,0 +1,29 @@
+$small-mobile: 400px;
+
+.main {
+  &__filter-info {
+    margin-bottom: 50px;
+  }
+
+  &__text {
+    font-size: 20px;
+    font-weight: 700;
+
+    span {
+      margin-left: 20px;
+      font-weight: 600;
+      color: rgb(255, 162, 0);
+    }
+  }
+
+  &__no-pokemons {
+    text-align: center;
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: $small-mobile) {
+  .main__text {
+    font-size: 16px;
+  }
+}

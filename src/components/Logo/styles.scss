@@ -1,0 +1,13 @@
+.logo {
+  font-size: 25px;
+  color: rgb(255, 162, 0);
+  font-weight: 700;
+  outline: none;
+  text-decoration: none;
+  transition: border-bottom 0.2s ease;
+
+  &:hover {
+    border-bottom: 3px solid rgb(255, 162, 0);
+    transition: border-bottom 0.2s ease;
+  }
+}

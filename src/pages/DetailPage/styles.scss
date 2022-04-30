@@ -1,0 +1,79 @@
+$small-mobile: 400px;
+
+.pokemon-detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__wrapper {
+    padding: 30px;
+    border: 1px solid #000;
+    border-radius: 20px;
+  }
+
+  &__img {
+    width: 300px;
+  }
+
+  &__name {
+    margin-bottom: 0;
+    font-size: 30px;
+  }
+
+  &__types {
+    padding: 0;
+    list-style: none;
+
+    li {
+      display: inline;
+      margin-right: 10px;
+      font-weight: 600;
+      font-size: 20px;
+      &.fire {
+        color: red;
+      }
+
+      &.grass {
+        color: green;
+      }
+
+      &.poison {
+        color: purple;
+      }
+
+      &.water {
+        color: blue;
+      }
+
+      &.bug {
+        color: goldenrod;
+      }
+
+      &.flying {
+        color: gray;
+      }
+
+      &.normal {
+        color: black;
+      }
+
+      &.electric {
+        color: orange;
+      }
+
+      &.ground {
+        color: brown;
+      }
+
+      &.fairy {
+        color: pink;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $small-mobile) {
+  .pokemon-detail__img {
+    width: 200px;
+  }
+}

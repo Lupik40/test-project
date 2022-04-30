@@ -1,0 +1,15 @@
+.filter-bar {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+
+  &__wrapper {
+    width: 100%;
+  }
+
+  &__name {
+    font-size: 20px;
+    font-weight: 700;
+  }
+}

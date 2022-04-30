@@ -1,0 +1,112 @@
+$desktop: 1300px;
+$mobile: 768px;
+
+.pokemon {
+  padding: 20px;
+  width: 18%;
+  margin-right: 20px;
+  margin-bottom: 30px;
+  text-align: center;
+  border: 1px solid #000;
+  border-radius: 20px;
+  transition: background 0.3s ease;
+
+  &:hover {
+    background: rgb(212, 212, 212);
+    transition: background 0.3s ease;
+  }
+
+  &:nth-of-type(5n) {
+    margin-right: 0;
+  }
+
+  &__img {
+    width: 100%;
+    height: 200px;
+  }
+
+  &__name {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    transition: color 0.4s ease;
+
+    &:hover {
+      color: rgb(255, 123, 0);
+      transition: color 0.4s ease;
+    }
+  }
+
+  &__types {
+    list-style: none;
+    padding-left: 0;
+
+    li {
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: 600;
+
+      &.fire {
+        color: red;
+      }
+
+      &.grass {
+        color: green;
+      }
+
+      &.poison {
+        color: purple;
+      }
+
+      &.water {
+        color: blue;
+      }
+
+      &.bug {
+        color: goldenrod;
+      }
+
+      &.flying {
+        color: gray;
+      }
+
+      &.normal {
+        color: black;
+      }
+
+      &.electric {
+        color: orange;
+      }
+
+      &.ground {
+        color: brown;
+      }
+
+      &.fairy {
+        color: pink;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $desktop) {
+  .pokemon {
+    width: 30%;
+    margin-right: 20px;
+
+    &:nth-of-type(3n) {
+      margin-right: 0;
+    }
+
+    &:nth-of-type(5n) {
+      margin-right: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: $mobile) {
+  .pokemon {
+    width: 100%;
+    margin-right: 0px !important;
+  }
+}
